@@ -1,0 +1,11 @@
+[Core General]
+ObeyDRM=false
+
+[Nav Panel]
+GroupByAuthor=false
+
+[PageView]
+ViewColumns=4
+
+[Reviews]
+AnnotationTools=<tool name="Միտք" type="highlight" id="1"><engine color="#ffff00" type="TextSelector"><annotation color="#ffff00" type="Highlight"/></engine><shortcut>1</shortcut></tool>,<tool name="Պրակտիկա" type="highlight" id="2"><engine color="#55ff7f" type="TextSelector"><annotation color="#55ff7f" type="Highlight"/></engine><shortcut>2</shortcut></tool>,<tool name="Մտածելու" type="highlight" id="3"><engine color="#ffaaff" type="TextSelector"><annotation color="#ffaaff" type="Highlight"/></engine><shortcut>3</shortcut></tool>,<tool name="Փաստ" type="highlight" id="4"><engine color="#55aaff" type="TextSelector"><annotation color="#55aaff" type="Highlight"/></engine><shortcut>4</shortcut></tool>,<tool type="note-linked" id="5"><engine color="#ffff00" type="PickPoint" hoverIcon="tool-note"><annotation color="#ffff00" type="Text" icon="Note"/></engine><shortcut>5</shortcut></tool>,<tool type="note-inline" id="6"><engine color="#ffff00" type="PickPoint" hoverIcon="tool-note-inline" block="true"><annotation color="#ffff00" type="FreeText"/></engine><shortcut>6</shortcut></tool>,<tool type="ink" id="7"><engine color="#00ff00" type="SmoothLine"><annotation width="2" color="#00ff00" type="Ink"/></engine><shortcut>7</shortcut></tool>,<tool type="straight-line" id="8"><engine color="#ffe000" points="2" type="PolyLine"><annotation width="1" color="#ffe000" type="Line"/></engine><shortcut>8</shortcut></tool>,<tool type="polygon" id="9"><engine color="#007eee" points="-1" type="PolyLine"><annotation width="1" color="#007eee" type="Line"/></engine><shortcut>9</shortcut></tool>,<tool type="stamp" id="10"><engine type="PickPoint" size="64" hoverIcon="okular" block="true"><annotation type="Stamp" icon="okular"/></engine></tool>,<tool type="underline" id="11"><engine color="#000000" type="TextSelector"><annotation color="#000000" type="Underline"/></engine></tool>,<tool type="ellipse" id="12"><engine color="#00ffff" type="PickPoint" block="true"><annotation width="5" color="#00ffff" type="GeomCircle"/></engine></tool>

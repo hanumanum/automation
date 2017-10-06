@@ -2,7 +2,7 @@ sudo apt-get install git
 sudo bash -c 'echo "Asia/Yerevan" > /etc/timezone'
 sudo dpkg-reconfigure keyboard-configuration
 cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
-
+cp configs/okularpartrc /home/kubuntu/.config/
 cd /tmp
 mkdir /tmp/workingwith
 sudo apt-get install jq keepassx terminator fish curl chromium-browser mplayer
@@ -22,5 +22,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get update
 sudo apt-get install code # or code-insiders
 
+cp configs/okularpartrc /home/kubuntu/.config/
 
 terminator & exit
