@@ -1,8 +1,8 @@
 sudo apt-get install git
 sudo bash -c 'echo "Asia/Yerevan" > /etc/timezone'
 sudo dpkg-reconfigure keyboard-configuration
-cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
 cp configs/okularpartrc /home/kubuntu/.config/
+cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
 cd /tmp
 mkdir /tmp/workingwith
 sudo apt-get install jq keepassx terminator fish curl chromium-browser mplayer
