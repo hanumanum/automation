@@ -7,14 +7,13 @@ cd /tmp
 mkdir /tmp/workingwith
 sudo apt-get -y install  jq keepassx terminator fish curl chromium-browser mplayer
 
+
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo chown -R $USER:$(id -gn $USER) /home/kubuntu/.config
 #sudo apt-get install npm #may be not necessary
 sudo npm install -g yarn
-
-git config --global user.email "a.kolyan@hanuman.am"
-git config --global user.name "hanuman"
+sudo npm install -g nodemon
 
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
