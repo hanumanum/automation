@@ -4,9 +4,16 @@ sudo dpkg-reconfigure keyboard-configuration
 cp configs/okularpartrc /home/kubuntu/.config/
 cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
 cd /tmp
-mkdir /tmp/workingwith
-sudo apt-get -y install  jq keepassx terminator fish curl chromium-browser mplayer
 
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update 
+sudo apt-get -y install google-chrome-stable
+
+
+mkdir /tmp/workingwith
+#sudo apt-get -y chromium-browser
+sudo apt-get -y install  jq keepassx terminator fish curl mplayer
 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
