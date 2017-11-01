@@ -1,4 +1,5 @@
 sudo apt-get -y install git
+bash setup.git.sh
 sudo bash -c 'echo "Asia/Yerevan" > /etc/timezone'
 sudo dpkg-reconfigure keyboard-configuration
 cp configs/okularpartrc /home/kubuntu/.config/
