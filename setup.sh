@@ -14,7 +14,7 @@ sudo apt-get -y install google-chrome-stable
 
 mkdir /tmp/workingwith
 #sudo apt-get -y chromium-browser
-sudo apt-get -y install  jq keepassx terminator fish curl mplayer
+sudo apt-get -y install jq keepassx terminator fish curl mplayer htop
 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
