@@ -28,8 +28,9 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
 sudo apt-get -y install code # or code-insiders
+sudo apt-get install firefox
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.config/Code/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
 sudo apt-get -y install shutter
 sudo apt autoremove -y
-terminator & exit
+terminator --execute 'fish' & exit
