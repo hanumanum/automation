@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xbel>
 <xbel xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info">
+ <bookmark href="file:///tmp">
+  <title>tmp</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1515489606/0 (V2)</ID>
+    <IsHidden>false</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/kubuntu/Desktop">
+  <title>Desktop</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1515486083/0 (V2)</ID>
+    <IsHidden>false</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
  <bookmark href="file:///home/kubuntu">
   <title>Home</title>
   <info>
@@ -10,6 +34,30 @@
    <metadata owner="http://www.kde.org">
     <ID>1515478639/0</ID>
     <isSystemItem>true</isSystemItem>
+    <IsHidden>false</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///media/kubuntu/USB DISK/automation">
+  <title>automation</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1515502693/1 (V2)</ID>
+    <IsHidden>false</IsHidden>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/kubuntu/Desktop/tumo-helper-scripts">
+  <title>tumo-helper-scripts</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="inode-directory"/>
+   </metadata>
+   <metadata owner="http://www.kde.org">
+    <ID>1515502706/2 (V2)</ID>
     <IsHidden>false</IsHidden>
    </metadata>
   </info>
@@ -53,30 +101,6 @@
    </metadata>
   </info>
  </bookmark>
- <bookmark href="file:///home/kubuntu/Desktop">
-  <title>Desktop</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="inode-directory"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1515486083/0 (V2)</ID>
-    <IsHidden>false</IsHidden>
-   </metadata>
-  </info>
- </bookmark>
- <bookmark href="file:///tmp">
-  <title>tmp</title>
-  <info>
-   <metadata owner="http://freedesktop.org">
-    <bookmark:icon name="inode-directory"/>
-   </metadata>
-   <metadata owner="http://www.kde.org">
-    <ID>1515489606/0 (V2)</ID>
-    <IsHidden>false</IsHidden>
-   </metadata>
-  </info>
- </bookmark>
  <separator href="file:///rofs">
   <info>
    <metadata owner="http://www.kde.org">
@@ -90,7 +114,7 @@
   </info>
   <title>Loop Device</title>
  </separator>
- <separator>
+ <separator href="file:///media/kubuntu/Blank">
   <info>
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/sda4</UDI>
@@ -129,7 +153,7 @@
   </info>
   <title>USB DISK</title>
  </separator>
- <separator>
+ <separator href="file:///media/kubuntu/BOOTCAMP">
   <info>
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/sda3</UDI>
@@ -142,7 +166,7 @@
   </info>
   <title>BOOTCAMP</title>
  </separator>
- <separator>
+ <separator href="file:///media/kubuntu/MacOSX">
   <info>
    <metadata owner="http://www.kde.org">
     <UDI>/org/freedesktop/UDisks2/block_devices/sda2</UDI>
