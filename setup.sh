@@ -33,6 +33,16 @@ cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.con
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
 cp configs/user-places.xbel /home/kubuntu/.local/share/
 
+# Install Diigo Web Collector extension for Mozilla Firefox
+# Create a temporary folder
+mkdir extensions_temp
+cd ~/extensions_temp
+
+# Get the version of the latest diigo add-on for firefox
+diigoVersion=$(wget -q -O - https://addons.mozilla.org/en-US/firefox/addon/diigo-web-collector/ | xmllint --html --xpath '(//dd[@class = "AddonMoreInfo-version"])[1]' - 2>/dev/null | tr -d '<dd class="AddonMoreInfo-version">/-')
+
+
+
 sudo apt-get -y install shutter
 sudo apt-get -y install gimp
 sudo apt autoremove -y
