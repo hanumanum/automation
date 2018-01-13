@@ -37,9 +37,10 @@ cp configs/user-places.xbel /home/kubuntu/.local/share/
 # Create a temporary folder
 mkdir extensions_temp
 cd ~/extensions_temp
-
 # Get the version of the latest diigo add-on for firefox
 diigoVersion=$(wget -q -O - https://addons.mozilla.org/en-US/firefox/addon/diigo-web-collector/ | xmllint --html --xpath '(//dd[@class = "AddonMoreInfo-version"])[1]' - 2>/dev/null | tr -d '<dd class="AddonMoreInfo-version">/-')
+diigoFileAddr="wget https://addons.mozilla.org/firefox/downloads/file/763598/diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi"
+eval $diigoFileAddr
 
 
 
