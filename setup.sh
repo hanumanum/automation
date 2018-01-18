@@ -1,17 +1,13 @@
+cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
+
 sudo apt-get update
 sudo apt-get -y install firefox
 sudo apt-get -y install git
 bash setup.git.sh
 sudo bash -c 'echo "Asia/Yerevan" > /etc/timezone'
 sudo dpkg-reconfigure keyboard-configuration
-cp configs/okularpartrc /home/kubuntu/.config/
 cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
 cd /tmp
-
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt-get -y install google-chrome-stable
-
 
 mkdir /tmp/workingwith
 #sudo apt-get -y chromium-browser
@@ -31,9 +27,16 @@ sudo apt-get update
 sudo apt-get -y install code # or code-insiders
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.config/Code/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
-cp configs/user-places.xbel /home/kubuntu/.local/share/
+cp /media/kubuntu/USB\ DISK/automation/configs/user-places.xbel /home/kubuntu/.local/share/
+cp /media/kubuntu/USB\ DISK/automation/configs/okularpartrc /home/kubuntu/.config/
 
 sudo apt-get -y install shutter
 sudo apt-get -y install gimp
 sudo apt autoremove -y
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get -y install google-chrome-stable
+
 terminator --execute 'fish' & exit
+

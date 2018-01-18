@@ -1,0 +1,5 @@
+deb cdrom:[Kubuntu 17.04 _Zesty Zapus_ - Release amd64 (20170412)]/ zesty main multiverse restricted universe
+deb http://old-releases.ubuntu.com/ubuntu/ zesty main restricted universe
+deb http://security.ubuntu.com/ubuntu/ zesty-security main restricted universe
+deb http://old-releases.ubuntu.com/ubuntu/ zesty-updates main restricted universe
+
