@@ -1,4 +1,4 @@
-cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
+sudo cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
 
 sudo apt-get update
 sudo apt-get -y install firefox
