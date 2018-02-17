@@ -1,3 +1,4 @@
+xrandr --output eDP --mode 1920x1080 --rate 60
 sudo cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
 
 sudo apt-get update
