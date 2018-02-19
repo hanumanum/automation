@@ -46,7 +46,7 @@ wget $diigoFileAddr   # Download diigo's latest version
 unzip diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi manifest.json  #unzip manifest.json from .xpi
 diigoID=$(grep "\"id\":" manifest.json | cut -d':' -f2 | cut -d'"' -f2)   # Extract the addon identifier string from manifest.json
 mv diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi $diigoID.xpi # rename diigo addon to apropriate name
-mv 
+mv $diigoID.xpi /usr/lib/firefox-addons/extensions/   # Move diigo addon to Firefox' extension directory
 
 
 
