@@ -33,18 +33,20 @@ cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.con
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
 cp configs/user-places.xbel /home/kubuntu/.local/share/
 
-# Install Diigo Web Collector extension for Mozilla Firefox
+
+# Install the latest version of Diigo Web Collector extension for Mozilla Firefox
 # Create a temporary folder
 mkdir extensions_temp
 cd ~/extensions_temp
 # Get the version of the latest diigo add-on for firefox
 diigoVersion=$(wget -q -O - https://addons.mozilla.org/en-US/firefox/addon/diigo-web-collector/ | xmllint --html --xpath '(//dd[@class = "AddonMoreInfo-version"])[1]' - 2>/dev/null | tr -d '<dd class="AddonMoreInfo-version">/-')
 diigoFileAddr="https://addons.mozilla.org/firefox/downloads/file/763598/diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi"
-wget $diigoFileAddr
+wget $diigoFileAddr   # Download diigo's latest version
 # Get the manifest.json from diigo extension and extract the addon identifier
-unzip diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi manifest.json
-diigoID=$(grep "\"id\":" manifest.json | cut -d':' -f2 | cut -d'"' -f2)
-
+unzip diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi manifest.json  #unzip manifest.json from .xpi
+diigoID=$(grep "\"id\":" manifest.json | cut -d':' -f2 | cut -d'"' -f2)   # Extract the addon identifier string from manifest.json
+mv diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi $diigoID.xpi # rename diigo addon to apropriate name
+mv 
 
 
 
