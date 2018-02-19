@@ -43,6 +43,8 @@ diigoFileAddr="https://addons.mozilla.org/firefox/downloads/file/763598/diigo_we
 wget $diigoFileAddr
 # Get the manifest.json from diigo extension and extract the addon identifier
 unzip diigo_web_collector_capture_and_annotate-$diigoVersion-an+fx.xpi manifest.json
+diigoID=$(grep "\"id\":" manifest.json | cut -d':' -f2 | cut -d'"' -f2)
+
 
 
 
