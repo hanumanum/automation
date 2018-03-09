@@ -39,5 +39,9 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get -y install chromium-browser
 alias google-chrome="chromium-browser"
+alias tumo-helper-scripts="cd /home/kubuntu/Desktop/tumo-helper-scripts/"
+alias usb="cd '/media/kubuntu/USB DISK/'"
+sudo apt remove konsole
+
 terminator --execute 'fish' & exit
 
