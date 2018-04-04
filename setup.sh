@@ -44,5 +44,9 @@ alias tumo-helper-scripts="cd /home/kubuntu/Desktop/tumo-helper-scripts/"
 alias usb="cd '/media/kubuntu/USB DISK/'"
 sudo apt remove konsole
 
+tar xvfJ  "/media/kubuntu/USB DISK/soft/tsetup.1.2.15.tar.xz" -C /home/kubuntu/
+cd /home/kubuntu/Telegram/ && ./Telegram &
+
+
 terminator --execute 'fish' & exit
 

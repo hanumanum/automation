@@ -11,7 +11,7 @@ cd /tmp
 
 mkdir /tmp/workingwith
 #sudo apt-get -y chromium-browser
-sudo apt-get -y install keepassx terminator fish htop curl
+sudo apt-get -y install keepassx terminator jq fish htop curl
 
 #curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 #sudo apt-get install -y nodejs
