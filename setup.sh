@@ -5,8 +5,10 @@ sudo add-apt-repository ppa:peek-developers/stable -y
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-
 sudo apt-get update
+sudo apt-get -y --allow-unauthenticated install code # or code-insiders
+
+
 sudo apt-get -y install firefox
 sudo apt-get -y install git
 bash setup.git.sh
@@ -29,7 +31,6 @@ sudo install npm
 sudo npm install -g nodemon
 sudo ln -s "$(which nodejs)" /usr/bin/node
 
-sudo apt-get -y install code # or code-insiders
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.config/Code/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/kazam/ /home/kubuntu/.config/kazam/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
@@ -40,7 +41,7 @@ cp -R "/media/kubuntu/USB DISK/automation/jsproject_template" ~/Desktop/
 sudo apt-get -y install shutter
 #sudo apt-get -y install gimp
 sudo apt-get -y install peek
-sudo apt-get -y install moc
+sudo apt-get -y install moc moc-ffmpeg-plugin
 sudo apt autoremove -y
 
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
@@ -55,6 +56,9 @@ tar xvfJ  "/media/kubuntu/USB DISK/soft/tsetup.1.2.15.tar.xz" -C /home/kubuntu/
 
 cd /home/kubuntu/Telegram/ && ./Telegram &
 
+sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo chmod a+x /usr/local/bin/youtube-dl
+hash -r
 
 terminator --execute 'fish' & exit
 
