@@ -2,8 +2,8 @@
 sudo cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
 sudo add-apt-repository ppa:peek-developers/stable -y
 
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+#curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
 sudo apt-get -y --allow-unauthenticated install code # or code-insiders
@@ -60,5 +60,10 @@ sudo wget https://yt-dl.org/latest/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+x /usr/local/bin/youtube-dl
 hash -r
 
-terminator --execute 'fish' & exit
+terminator --execute 'fish' &
 
+
+sudo dpkg -i /media/kubuntu/USB\ DISK/soft/slack-desktop-3.2.1-amd64.deb
+sudo apt-get install -f
+
+exit
