@@ -1,15 +1,14 @@
 #xrandr --output eDP --mode 1920x1080 --rate 60
-#sudo cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
+sudo cp /media/kubuntu/USB\ DISK/automation/configs/sources.list /etc/apt/
 sudo add-apt-repository ppa:peek-developers/stable -y
 
 rm -r ~/Music
 ln -s /media/kubuntu/USB\ DISK/music/ ~/Music
 ln -s /media/kubuntu/USB\ DISK/ ~/USB
-sudo apt-get -y install jq keepassx terminator fish curl htop kazam
 
-sudo apt install curl
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+
+#curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+#sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get update
 sudo apt-get -y --allow-unauthenticated install code # or code-insiders
@@ -28,20 +27,21 @@ cd /tmp
 
 mkdir /tmp/workingwith
 #sudo apt-get -y chromium-browser
+sudo apt-get -y install jq keepassx terminator fish curl htop kazam
 
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo chown -R $USER:$(id -gn $USER) /home/kubuntu/.config
 sudo install npm
+#sudo npm install -g yarn
 sudo npm install -g nodemon
-#sudo ln -s "$(which nodejs)" /usr/bin/node
+sudo ln -s "$(which nodejs)" /usr/bin/node
 
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/Code/User/ /home/kubuntu/.config/Code/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/kazam/ /home/kubuntu/.config/kazam/
 cp -R  /media/kubuntu/USB\ DISK/automation/configs/keepassx/ /home/kubuntu/.config/
-cp -R  /media/kubuntu/USB\ DISK/automation/configs/terminator/ /home/kubuntu/.config/
-cp -R /media/kubuntu/USB\ DISK/automation/configs/user-places.xbel /home/kubuntu/.local/share/
-cp -R /media/kubuntu/USB\ DISK/automation/configs/okularpartrc /home/kubuntu/.config/
+cp /media/kubuntu/USB\ DISK/automation/configs/user-places.xbel /home/kubuntu/.local/share/
+cp /media/kubuntu/USB\ DISK/automation/configs/okularpartrc /home/kubuntu/.config/
 cp -R "/media/kubuntu/USB DISK/automation/jsproject_template" ~/Desktop/
 
 sudo apt-get -y install shutter
