@@ -3,7 +3,8 @@
 sudo add-apt-repository ppa:peek-developers/stable -y
 
 rm -r ~/Music
-ln -s /media/kubuntu/USB\ DISK/music/ ~/Music
+ln -s /media/kubuntu/9252-A74B/music/ ~/Music
+ln -s /media/kubuntu/9252-A74B/ ~/DataDisk
 ln -s /media/kubuntu/USB\ DISK/ ~/USB
 sudo apt-get -y install jq keepassx terminator fish curl htop kazam
 
@@ -22,7 +23,7 @@ sudo bash -c 'echo "Asia/Yerevan" > /etc/timezone'
 sudo dpkg-reconfigure keyboard-configuration
 #sudo cp "/media/kubuntu/USB DISK/automation/configs/keyboard" "/etc/default/"
 cd ~/Desktop && git clone https://gitlab.com/a.kolyan/tumo-helper-scripts.git
-git clone https://github.com/tumofreduclips/iframes
+#git clone https://github.com/tumofreduclips/iframes
 cd /tmp
 
 
@@ -69,7 +70,7 @@ hash -r
 terminator --execute 'fish' &
 
 
-sudo dpkg -i /media/kubuntu/USB\ DISK/soft/slack-desktop-3.2.1-amd64.deb
+#sudo dpkg -i /media/kubuntu/USB\ DISK/soft/slack-desktop-3.2.1-amd64.deb
 sudo apt-get install -f
 
 exit
